@@ -3,9 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/styles/style.css">
   <title>Screenshot 1 page</title>
 </head>
 <body>
-  
+  <div class="wrapper__main">
+   
+    <!-- The small square left of the card -->
+    <div class="wrapper__left">
+      <div class="background">
+        <img src="misc/phone.png" alt="phone">
+        <p>Logg inn for å sende meldinger, lagre favoritter og søk. Du får også varsler når det skjer noe nytt!</p>
+        <p>Problemer med innloggingen? <a href="#">Her kan du finne hjelp</a></p>
+        <a href="#">Tilbake til FINN</a>
+      </div>
+    </div>
+
+    <!-- Card with input fields, buttons and utility links -->
+
+    <div class="wrapper__right">
+      <div class="card">
+        <div class="card__logo">
+          <img src="misc/logo.png" class="card__logo--finn" alt="finnlogo">
+          <img src="misc/schibsted-logo.png" class="card__logo--schibsted" alt="schibstedlogo">
+        </div>
+        <h1>Logg inn</h1>
+        <div class="container">
+          <label for="username"></label>
+          <input type="text" class="container__input" id="username" placeholder="Skriv inn din e-postadresse*" required>
+          <p>*Nødvendig felt</p>
+          <label for="pwd"></label>
+          <input type="password" class="container__input" id="pwd" placeholder="Vennligst oppgi passordet ditt*"
+            required>
+          <p>*Nødvendig felt</p>
+          <label class="checkbox">
+            <input type="checkbox" checked="checked">Hold meg innlogget
+          </label>
+          <a href="#"> Glemt passord?</a>
+          <button type="submit" class="button__primary">Logg på</button>
+          <button type="submit" class="button__secondary">Opprette ny konto</button>
+        </div>
+      </div>
+      <ul class="utilitylinks">
+        <li class="utilitylinks__style"><a href="#">Hjelp</a></li>
+        <li class="utilitylinks__style"><a href="#">Personvernerklæring</a></li>
+        <li class="utilitylinks__style"><a href="#">Vilkår</a></li>
+        <li class="utilitylinks__style"><a href="#">Om Schibsted-konto</a></li>
+      </ul>
+    </div>
+  </div>
 </body>
 </html>
