@@ -3,9 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/styles/common.css">
   <title>Demo page</title>
 </head>
 <body>
   <!-- EDIT THIS PAGE TO SHOW HOW YOU USE ALL THE ELEMENTS IMPLEMENTED IN YOUR DESIGN SYSTEM  -->
+
+
+  <div class="wrapper">
+    <!-- Card used to contain the login cointainer -->
+    <div class="card"> </div>
+    <!-- Container used to contain input fields, buttons a checkbox and a link -->
+    <div class="container">
+      <!-- Input field for username -->
+        <label for="username"></label>
+        <input type="text" class="container__input" id="username" placeholder="Skriv inn din e-postadresse*" required>
+      <!-- Input field for password -->
+        <label for="pwd"></label>
+        <input type="password" class="container__input" id="pwd" placeholder="Vennligst oppgi passordet ditt*" required>
+      <!-- Checkbox -->
+        <label class="checkbox">
+            <input type="checkbox" checked="checked">Hold meg innlogget
+        </label>
+      <!-- Forgot password link. Unsure if I should include this, but I did. -->
+        <a href="#"> Glemt passord?</a>
+      <!-- Primary blue button -->
+        <button type="submit" class="button__primary">Logg på</button>
+      <!-- Secondary white button -->
+        <button type="submit" class="button__secondary">Opprette ny konto</button>
+      </div>
+    </div>
+
 </body>
 </html>
