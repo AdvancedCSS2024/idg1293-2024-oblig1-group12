@@ -1,1 +1,163 @@
-/*# sourceMappingURL=style.css.map */
+body {
+  background-color: #F8F8F8;
+}
+
+.card {
+  display: flex;
+  border-radius: 10px;
+  flex-direction: column;
+  width: 450px;
+  height: 600px;
+  box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 24px 38px 3px rgba(0, 0, 0, 0.14);
+}
+.card .card__logo {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.card .card__logo .card__logo--finn {
+  width: auto;
+  height: 10px;
+  margin-top: 32px;
+  margin-left: 20px;
+}
+.card .card__logo .card__logo--schibsted {
+  width: auto;
+  height: 64px;
+}
+.card h1 {
+  font-family: Calibri, sans-serif;
+  margin-left: 5%;
+  margin-top: 35px;
+  font-size: 28px;
+}
+.card p {
+  font-family: Calibri, sans-serif;
+  margin-top: 0;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.card a {
+  color: #4b8ee2;
+  font-family: Calibri, sans-serif;
+  font-weight: bold;
+  margin: 30px 0;
+}
+.card a:visited {
+  color: #4b8ee2;
+}
+.card .container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+  width: 90%;
+}
+.card .container .container__input {
+  height: 60px;
+  border-style: none;
+  padding-left: 10px;
+  background-color: rgba(0, 0, 0, 0.09);
+  border-bottom: 1px solid darkgray;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  transition: 0.3s;
+}
+.card .container .container__input::-moz-placeholder {
+  font-family: Calibri, sans-serif;
+  font-size: 16px;
+}
+.card .container .container__input::placeholder {
+  font-family: Calibri, sans-serif;
+  font-size: 16px;
+}
+.card .container .container__input:hover {
+  background-color: rgba(0, 0, 0, 0.13);
+}
+.card .container .container__input:focus {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-bottom: 2px solid #0063fb;
+  outline: 0px;
+  transition: 0.3s;
+}
+.card .container .container__input:focus::-moz-placeholder {
+  font-size: 12px;
+  border-bottom: 2px solid #0063fb;
+}
+.card .container .container__input:focus::placeholder {
+  font-size: 12px;
+  border-bottom: 2px solid #0063fb;
+}
+.card .container .checkbox {
+  font-family: Calibri, sans-serif;
+}
+.card .container .button__primary {
+  padding: 15px;
+  font-family: Calibri, sans-serif;
+  margin-bottom: 10px;
+  font-size: 16px;
+  background-color: #0063fb;
+  color: white;
+  border-radius: 8px;
+  border: 0px;
+}
+.card .container .button__primary:hover {
+  background-color: #14529c;
+  transition: 0.3s;
+}
+.card .container .button__secondary {
+  padding: 15px;
+  font-family: Calibri, sans-serif;
+  margin-bottom: 10px;
+  font-size: 16px;
+  background-color: white;
+  color: #0063fb;
+  border-radius: 8px;
+  border: 0px;
+}
+.card .container .button__secondary:hover {
+  transition: 0.3s;
+  box-shadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.3);
+}
+
+.utilitylinks {
+  text-align: center;
+}
+.utilitylinks .utilitylinks__style {
+  display: inline;
+  font-size: 12px;
+  margin-left: 15px;
+  font-family: Calibri, sans-serif;
+}
+.utilitylinks .utilitylinks__style a {
+  text-decoration: none;
+  color: rgb(82, 81, 81);
+}
+.utilitylinks .utilitylinks__style a:hover {
+  text-decoration: underline;
+}
+
+.background {
+  height: 400px;
+  width: 600px;
+  background-color: #f1f9ff;
+  text-align: center;
+  font-family: Calibri, sans-serif;
+}
+.background a {
+  text-decoration: none;
+  color: #4b8ee2;
+}
+.background a:hover {
+  color: #4b8ee2;
+}
+.background img {
+  margin-top: 20px;
+}
+
+.wrapper__main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+}/*# sourceMappingURL=style.css.map */

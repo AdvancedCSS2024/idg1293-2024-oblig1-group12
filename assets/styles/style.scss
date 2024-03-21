@@ -1,1 +1,191 @@
 // USE THIS FILE TO CREATE THE LAYOUT AND SPECIFIC RULES FOR SCREENSHOTS 1 and 2
+
+//maps for making sizing easy and customizable
+
+$card-width: (
+  "small": 200px,
+  "big": 450px,
+);
+$card-height: (
+  "small": 200px,
+  "big": 600px,
+);
+$font-sizes: (
+  "small": 12px,
+  "medium": 16px,
+  "large": 22px,
+  "subheader": 28px,
+  "header": 34px,
+);
+
+//scss
+
+
+body {
+    background-color: #F8F8F8;
+}
+
+//Card
+.card {
+  display: flex;
+  border-radius: 10px;
+  flex-direction: column;
+  width: map-get($card-width, big);
+  height: map-get($card-height, big);
+  box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2),
+    0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 24px 38px 3px rgba(0, 0, 0, 0.14); //shadow stolen from finn.no login side
+
+  .card__logo {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    .card__logo--finn {
+      width: auto;
+      height: 10px;
+      margin-top: 32px;
+      margin-left: 20px;
+    }
+    .card__logo--schibsted {
+      width: auto;
+      height: 64px;
+    }
+  }
+
+  h1 {
+    font-family: Calibri, sans-serif;
+    margin-left: 5%;
+    margin-top: 35px;
+    font-size: map-get($font-sizes, subheader);
+  }
+
+  p {
+    font-family: Calibri, sans-serif;
+    margin-top: 0;
+    font-size: map-get($font-sizes, small);
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  a {
+    color: #4b8ee2;
+    font-family: Calibri, sans-serif;
+    font-weight: bold;
+    margin: 30px 0;
+
+    &:visited {
+      color: #4b8ee2;
+    }
+  }
+
+  //container containing buttons and input fields
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    width: 90%;
+
+    .container__input {
+      height: 60px;
+      border-style: none;
+      padding-left: 10px;
+      background-color: rgba(0, 0, 0, 0.09);
+      border-bottom: 1px solid darkgray;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      transition: 0.3s;
+      &::placeholder {
+        font-family: Calibri, sans-serif;
+        font-size: map-get($font-sizes, medium);
+      }
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.13);
+      }
+      &:focus {
+        background-color: rgba(0, 0, 0, 0.05);
+        border-bottom: 2px solid #0063fb;
+        outline: 0px;
+        transition: 0.3s;
+        &::placeholder {
+          font-size: map-get($font-sizes, small);
+          border-bottom: 2px solid #0063fb;
+        }
+      }
+    }
+    .checkbox {
+      font-family: Calibri, sans-serif;
+    }
+
+    .button__primary {
+      padding: 15px;
+      font-family: Calibri, sans-serif;
+      margin-bottom: 10px;
+      font-size: map-get($font-sizes, medium);
+      background-color: #0063fb;
+      color: white;
+      border-radius: 8px;
+      border: 0px;
+      &:hover {
+        background-color: #14529c;
+        transition: 0.3s;
+      }
+    }
+    .button__secondary {
+      padding: 15px;
+      font-family: Calibri, sans-serif;
+      margin-bottom: 10px;
+      font-size: map-get($font-sizes, medium);
+      background-color: white;
+      color: #0063fb;
+      border-radius: 8px;
+      border: 0px;
+      &:hover {
+        transition: 0.3s;
+        box-shadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+}
+.utilitylinks {
+  text-align: center;
+  .utilitylinks__style {
+    display: inline;
+    font-size: map-get($font-sizes, small);
+    margin-left: 15px;
+    font-family: Calibri, sans-serif;
+    a {
+      text-decoration: none;
+      color: rgb(82, 81, 81);
+      &:hover {
+        text-decoration:underline;
+      }
+    }
+  }
+}
+
+//The small square left of the card
+.background {
+  height: 400px;
+  width: 600px;
+  background-color: #f1f9ff;
+  text-align: center;
+  font-family: Calibri, sans-serif;
+  a {
+    text-decoration: none;
+    color: #4b8ee2;
+    &:hover {
+      color: #4b8ee2;
+    }
+  }
+
+  img {
+    margin-top: 20px;
+  }
+}
+
+// wrapper that wraps the card and the background square
+.wrapper__main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+}
