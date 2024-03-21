@@ -1,3 +1,140 @@
 // YOU MUST USE BEM HERE
-// IMPLEMENT ALL THE RULES RELATED TO THE COMPONENTS THAT ARE PART OF YOUR DESIGN SYSTEM HERE 
+// IMPLEMENT ALL THE RULES RELATED TO THE COMPONENTS THAT ARE PART OF YOUR DESIGN SYSTEM HERE
 // Example: input, button, card ...
+
+
+//maps for making sizing easy and customizable
+$card-width: (
+  "small": 200px,
+  "big": 450px,
+);
+$card-height: (
+  "small": 200px,
+  "big": 600px,
+);
+$font-sizes: (
+  "small": 12px,
+  "medium": 16px,
+  "large": 22px,
+  "subheader": 28px,
+  "header": 34px,
+);
+
+//scss
+
+body {
+  margin: 10% 5% 10% 5%;
+  background-color: #f8f8f8;
+}
+
+//Card
+
+.card {
+  display: flex;
+  border-radius: 10px;
+  flex-direction: column;
+  width: map-get($card-width, big);
+  height: map-get($card-height, big);
+  box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2),
+    0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 24px 38px 3px rgba(0, 0, 0, 0.14); //stolen from source
+
+  .card__logo {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  a {
+    color: #4b8ee2;
+    font-family: Calibri, sans-serif;
+    font-weight: bold;
+    margin: 30px 0;
+
+    &:visited {
+      color: #4b8ee2;
+    }
+  }
+}
+
+//container containing buttons and input fields
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: 5%;
+  width: 90%;
+  justify-content: space-between;
+
+  .container__input {
+    height: 60px;
+    border-style: none;
+    padding-left: 10px;
+    background-color: rgba(0, 0, 0, 0.09);
+    border-bottom: 1px solid darkgray;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    transition: 0.3s;
+    width: 400px;
+    margin-bottom: 20px;
+    &::placeholder {
+      font-family: Calibri, sans-serif;
+      font-size: map-get($font-sizes, medium);
+    }
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.13);
+    }
+    &:focus {
+      background-color: rgba(0, 0, 0, 0.05);
+      border-bottom: 2px solid #0063fb;
+      outline: 0px;
+      transition: 0.3s;
+      &::placeholder {
+        font-size: map-get($font-sizes, small);
+        border-bottom: 2px solid #0063fb;
+      }
+    }
+  }
+  //checkbox
+  .checkbox {
+    font-family: Calibri, sans-serif;
+  }
+  //Primary button
+  .button__primary {
+    padding: 15px;
+    font-family: Calibri, sans-serif;
+    margin-bottom: 10px;
+    font-size: map-get($font-sizes, medium);
+    background-color: #0063fb;
+    color: white;
+    border-radius: 8px;
+    border: 0px;
+    width: 400px;
+    height: 60px;
+    &:hover {
+      background-color: #14529c;
+      transition: 0.3s;
+    }
+  }
+  //Secondary button
+  .button__secondary {
+    padding: 15px;
+    font-family: Calibri, sans-serif;
+    margin-bottom: 10px;
+    font-size: map-get($font-sizes, medium);
+    background-color: white;
+    color: #0063fb;
+    border-radius: 8px;
+    border: 0px;
+    width: 400px;
+    height: 60px;
+    &:hover {
+      transition: 0.3s;
+      box-shadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+.wrapper {
+  display: flex;
+  width: 90%;
+}
